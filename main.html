@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen w-full">
+    <button id="open_new" href="?i=2" target="_blank">Open Seeker</button>
+    <data id="data-container"></data>
+            <img class="max-w-2xl w-2xl absolute" src="https://static.boredpanda.com/blog/wp-content/uploads/2017/12/lane3-5a2443917d60f__880.jpg" alt="">
+</body>
+</html>
+
+<style>
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+<script src="/movingWindow.js"></script>
+<script>
+    let openInNewBtn = document.querySelector("button#open_new")
+    openInNewBtn.addEventListener("click", () => {
+        window.open(`/mirror/seeker.html`, 
+        'targetWindow',
+        `toolbar=no,
+         location=no,
+         status=no,
+         menubar=no,
+         scrollbars=no,
+         resizable=yes,
+         width=320px,
+         height=320px`)
+    })
+</script>

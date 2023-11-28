@@ -1,0 +1,7 @@
+
+    {#if meme}
+            <video autoplay muted loop>
+                <source src="/gifs/IKnowSomthing.mp4" type="video/mp4">
+            </video>
+    {:else}
+    {/if}
